@@ -1,12 +1,13 @@
 #include<iostream>
 #include<math.h>
+#include<string.h>
 
 using namespace std;
 
 
 void decToBin(int dec)
 {
-	int arr[3];
+	int arr[20];
 	int i=0;
 	//int z=dec;
 	
@@ -17,7 +18,7 @@ void decToBin(int dec)
 		i++;
 	}
 	
-	while(i>-1)
+	while(i>0)
 	{
 		cout<<arr[--i];
 	}
@@ -39,14 +40,15 @@ void binToDec(int bin)
 		sum=bin%10*pow(2,i);
 		i--;
 	}while(i>-1);
-	//cout<<endl<<sum;	
+	cout<<endl<<sum;	
 }
 
 int main()
 {
-	int x,y;
+	int x,y;char a;
 	cin>>x;
 	decToBin(x);
+	a=getchar();
 	cin>>y;
 	binToDec(y);
 	
