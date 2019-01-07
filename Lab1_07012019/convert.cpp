@@ -5,10 +5,12 @@
 using namespace std;
 
 
-void decToBin(int dec)
+void decToBin()
 {
 	int arr[20];
-	int i=0;
+	int i=0,dec;
+	cin>>dec;
+	
 	//int z=dec;
 	
 	while(dec>0)
@@ -25,19 +27,21 @@ void decToBin(int dec)
 	
 }
 
-void binToDec(int bin)
+void binToDec()
 {
-	int sum=0,i=0,bin2;
+	int sum=0,i=0,bin,bin2,arr2[10];
+	cin>>bin;
 	bin2=bin;
 	do
 	{
-		bin2=bin2/10;
-	i++;
+		arr2[i]=bin2%10;
+		i++;
+		
 	}while(bin2>=0);
 	
 	do
 	{
-		sum=bin%10*pow(2,i);
+		sum=sum+arr2[i]*pow(2,i);
 		i--;
 	}while(i>-1);
 	cout<<endl<<sum;	
@@ -45,13 +49,16 @@ void binToDec(int bin)
 
 int main()
 {
-	int x,y;char a;
-	cin>>x;
-	decToBin(x);
-	a=getchar();
-	cin>>y;
-	binToDec(y);
-	
+	int a;
+	do{
+		cin>>a;
+    switch(a)
+    {
+	case 1:decToBin();
+	break;
+	case 2:binToDec();
+    }
+    }while(a!=0);
 	return 0;
 	
 }
