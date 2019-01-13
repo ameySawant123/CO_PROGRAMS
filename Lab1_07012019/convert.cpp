@@ -29,22 +29,17 @@ void decToBin()
 
 void binToDec()
 {
-	int sum=0,i=0,bin,bin2,arr2[10];
-	cin>>bin;
-	bin2=bin;
+	int dec=0,i=0,num,arr2[10],base=1,rem=0;
+	cin>>num;
 	do
 	{
-		arr2[i]=bin2%10;
-		i++;
+		rem = num % 10;
+        dec = dec + rem * base;
+        num = num / 10 ;
+        base = base * 2;
 		
-	}while(bin2>=0);
-	
-	do
-	{
-		sum=sum+arr2[i]*pow(2,i);
-		i--;
-	}while(i>-1);
-	cout<<endl<<sum;	
+	}while(num>0);
+	cout<<endl<<dec;	
 }
 
 int main()
