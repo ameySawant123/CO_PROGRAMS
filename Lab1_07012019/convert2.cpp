@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdlib.h>
 #include<math.h>
 #include<string.h>
 
@@ -8,32 +9,30 @@ using namespace std;
 void decToBin()
 {
 	int arr[20];
-	int i=0;float dec;
-	cout<<"Enter Decimal no.: ";
+	int i=0, dec;
+	cout<<"Enter decimal number"<<endl;
 	cin>>dec;
-
 	while(dec>0)
 	{
-		int intPart=(int)dec;
-		float decPart=dec-intPart;
-		arr[i]=intPart%2;
-		intPart=intPart/2;
+		arr[i]=dec%2;
+		dec=dec/2;
 		i++;
 	}
-	//while((decPart-(int)decPart)==0)
-      //  decPart=decPart*2;
-		//if()
+
+   cout<<"Binary value is"<<endl;
 	while(i>0)
 	{
+
 		cout<<arr[--i];
 	}
+	cout<<endl;
 
 }
 
 void binToDec()
 {
 	int dec=0,i=0,num,arr2[10],base=1,rem=0;
-	cout<<"Enter binary no. :";
+	cout<<"Enter binary number"<<endl;
 	cin>>num;
 	do
 	{
@@ -43,7 +42,8 @@ void binToDec()
         base = base * 2;
 
 	}while(num>0);
-	cout<<endl<<dec;
+
+	cout<<"Decimal value is"<<endl<<dec<<endl;
 }
 
 int main()
@@ -58,9 +58,10 @@ int main()
 	case 1:decToBin();
 	break;
 	case 2:binToDec();
+    break;
+	case 3:exit(0);
     }
     }while(a!=0);
 	return 0;
 
 }
-
