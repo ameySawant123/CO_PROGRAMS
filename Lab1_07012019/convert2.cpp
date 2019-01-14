@@ -51,7 +51,7 @@ int main()
 	int a;
 	do{
 	cout<<"Enter your choice"<<endl;
-	cout<<"1: Decimal to binary "<<endl<<"2: binary to Decimal"<<endl;
+	cout<<"1Decimal to binary "<<endl<<"2binary to Decimal"<<endl;
     cin>>a;
     switch(a)
     {

@@ -7,28 +7,35 @@ using namespace std;
 
 void decToBin()
 {
-	int arr[20];
-	int i=0;float dec;
+	int arr[20],arr2[20];
+	int i=0,j=0;float dec;
 	cout<<"Enter Decimal no.: ";
 	cin>>dec;
-
-	while(dec>0)
+	int intPart=(int)dec;
+    float decPart=dec-intPart;
+	while(intPart>0)
 	{
-		int intPart=(int)dec;
-		float decPart=dec-intPart;
 		arr[i]=intPart%2;
 		intPart=intPart/2;
 		i++;
+
 	}
-	//while((decPart-(int)decPart)==0)
-      //  decPart=decPart*2;
-		//if()
+	while((decPart-(int)decPart)!=0.0)
+         {
+          decPart=decPart*2;
+          arr2[j]=(int)decPart;
+          j++;
+         }
 	while(i>0)
 	{
 		cout<<arr[--i];
 	}
+    while(j>0)
+    {
+        cout<<arr2[--j];
+    }
+    }
 
-}
 
 void binToDec()
 {
