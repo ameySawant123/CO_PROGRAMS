@@ -5,7 +5,7 @@ using namespace std;
 
 void bToD();
 void bToH();
-//void bToO();
+void bToO();
 
 void bToD()
 {
@@ -26,10 +26,12 @@ void bToD()
 
 void bToH()
 {
-	int dec=0,base=1,rem=0,num;
+	int dec=0,base=1,rem=0;
+	long int num;
 	string a;
 	cout<<"Enter binary number"<<endl;
 	cin>>num;
+	
 	do
 	{
 		rem = num % 10;
@@ -38,6 +40,7 @@ void bToH()
         base = base * 2;
 
 	}while(num>0);
+	
 	
 	do
 	{
@@ -79,6 +82,10 @@ void bToH()
 	//{
 		cout<<a;
 	//}
+}
+void bToO()
+{
+	
 }
 
 int main()
